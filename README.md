@@ -1,6 +1,6 @@
-# \# ⚡ NeuralDecide: AI Decision Intelligence System
+#  ⚡ NeuralDecide: AI Decision Intelligence System
 
-# 
+# Here is the link of this project - https://ai-decision-analysis.vercel.app/
 
 # NeuralDecide is a hackathon MVP web app that turns a plain-text problem description into a structured analysis. Describe your problem, and the app detects its domain, predicts the likely outcome, rates the difficulty, and suggests practical solutions.
 
