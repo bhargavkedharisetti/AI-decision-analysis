@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuralDecide — AI Problem Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">⚡</div>
+      Neural<em>Decide</em>
+    </div>
+    <div class="nav-right">
+      <div class="live-pill"><div class="pulse-dot"></div>AI ACTIVE</div>
+      <div class="hackathon-badge">HACKATHON MVP</div>
+    </div>
+  </div>
+</nav>
+
+<div class="main">
+  <section class="hero">
+    <div class="hero-eyebrow">▸ AI DECISION INTELLIGENCE SYSTEM</div>
+    <h1><span class="g1">Predict</span> Any Problem.<br><span class="g2">Solve</span> It Intelligently.</h1>
+    <p class="hero-sub">Describe any problem in plain text. The AI analyzes it, predicts the outcome, rates the difficulty, and gives you actionable solutions.</p>
+  </section>
+
+  <div class="input-section">
+    <div class="input-header">
+      <span class="input-title">▸ Describe Your Problem</span>
+      <span class="char-count" id="charCount">0 / 500</span>
+    </div>
+    <textarea class="problem-textarea" id="problemInput"
+      placeholder="e.g. My team keeps missing deadlines, morale is low, and we just lost two senior developers this month..."
+      maxlength="500" rows="5"></textarea>
+    <div class="examples-row">
+      <span style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;align-self:center;">TRY:</span>
+      <div class="example-chip" onclick="fillExample(0)">🏢 Team productivity drop</div>
+      <div class="example-chip" onclick="fillExample(1)">💻 App keeps crashing</div>
+      <div class="example-chip" onclick="fillExample(2)">📉 Sales declining</div>
+      <div class="example-chip" onclick="fillExample(3)">🔒 Security breach</div>
+      <div class="example-chip" onclick="fillExample(4)">🧠 Learning new skill</div>
+    </div>
+    <button class="analyze-btn" id="analyzeBtn" onclick="analyzeProblem()">
+      <span>⚡</span><span>Analyze &amp; Predict</span>
+    </button>
+  </div>
+
+  <div class="processing-box" id="processingBox">
+    <div class="processing-ring"></div>
+    <div style="font-size:15px;font-weight:700;margin-bottom:6px;">AI Engine Processing...</div>
+    <div style="font-size:13px;color:var(--muted);font-family:'DM Mono',monospace;">Running multi-model inference</div>
+    <div class="processing-steps">
+      <div class="proc-step" id="step1"><span class="proc-icon">○</span> Parsing natural language input</div>
+      <div class="proc-step" id="step2"><span class="proc-icon">○</span> Classifying problem domain</div>
+      <div class="proc-step" id="step3"><span class="proc-icon">○</span> Predicting outcome &amp; risk level</div>
+      <div class="proc-step" id="step4"><span class="proc-icon">○</span> Generating solution pathways</div>
+      <div class="proc-step" id="step5"><span class="proc-icon">○</span> Calculating difficulty score</div>
+    </div>
+  </div>
+
+  <div class="results-container" id="resultsContainer"></div>
+
+  <div class="history-section" id="historySection" style="display:none">
+    <div class="history-title">🕐 Recent Analyses <span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;font-weight:400;" id="histCount"></span></div>
+    <div class="history-grid" id="historyGrid"></div>
+  </div>
+</div>
+
+<div class="main">
+  <footer>
+    <span>© 2025 NeuralDecide — AI Decision Intelligence</span>
+    <span style="color:var(--border2)">Text Analysis · Prediction · Solutions · Difficulty Rating</span>
+  </footer>
+</div>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
